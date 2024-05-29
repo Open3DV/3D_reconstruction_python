@@ -35,8 +35,8 @@ def read_calib_param(param_txt):
     return intrinsic_1, kc1, intrinsic_2, kc2, R, T
 
 def phase_shift_4(images):
-    a = images[3].astype(np.int16) - images[1].astype(np.int16)
-    b = images[0].astype(np.int16) - images[2].astype(np.int16)
+    a = images[3].astype(np.int32) - images[1].astype(np.int32)
+    b = images[0].astype(np.int32) - images[2].astype(np.int32)
     
     thresh = 10
 
